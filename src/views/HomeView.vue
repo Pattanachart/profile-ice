@@ -1,24 +1,37 @@
 <template>
-  <div>
-    <h1 class="bg-success text-center">ภัทราวดี สังข์สม</h1>
-    <div class="row g-2 p-2">
-      <div class="col-6">
-        <img src="/image/1.jpg" class="img-fluid" />
+  <div class="text-center text-body-secondary h1 m-2 p-2">ภัทราวดี สังข์สม (OR)</div>
+  <div class="container mt-5">
+    <div id="carouselExample" class="carousel slide" style="max-width: 600px; margin: auto;">
+      <div class="carousel-inner">
+        <div
+          class="carousel-item"
+          :class="{ active: index === 0 }"
+          v-for="(image, index) in images"
+          :key="image"
+        >
+          <img :src="image" class="d-block w-100" alt="...">
+        </div>
       </div>
-      <div class="col-6">
-        <img src="/image/2.jpg" class="img-fluid" />
-      </div>
-      <div class="col-6">
-        <img src="/image/3.jpg" class="img-fluid" />
-      </div>
-      <div class="col-6">
-        <img src="/image/4.jpg" class="img-fluid" />
-      </div>
-      <div class="col-12">
-        <img src="/image/5.jpg" class="img-fluid" />
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+
+<script setup lang="ts">
+import { ref } from "vue";
+const images = ref([
+  "/image/1.jpg",
+  "/image/2.jpg",
+  "/image/3.jpg",
+  "/image/4.jpg",
+  "/image/5.jpg",
+]);
+</script>
