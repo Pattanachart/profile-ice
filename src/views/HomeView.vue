@@ -1,7 +1,14 @@
 <template>
-  <div class="text-center text-body-secondary h1 m-2 p-2">ภัทราวดี สังข์สม (OR)</div>
+  <div class="text-end">{{ dateNow }}</div>
+  <div class="text-center text-body-secondary h1 m-2 p-2">
+    ภัทราวดี สังข์สม (OR)
+  </div>
   <div class="container mt-5">
-    <div id="carouselExample" class="carousel slide" style="max-width: 600px; margin: auto;">
+    <div
+      id="carouselExample"
+      class="carousel slide"
+      style="max-width: 600px; margin: auto"
+    >
       <div class="carousel-inner">
         <div
           class="carousel-item"
@@ -9,14 +16,24 @@
           v-for="(image, index) in images"
           :key="image"
         >
-          <img :src="image" class="d-block w-100" alt="...">
+          <img :src="image" class="d-block w-100" alt="..." />
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -24,9 +41,11 @@
   </div>
 </template>
 
-
 <script setup lang="ts">
+import dayjs from "dayjs";
 import { ref } from "vue";
+
+const dateNow = dayjs().format("MMMM D, YYYY h:mm A");
 const images = ref([
   "/image/1.jpg",
   "/image/2.jpg",
@@ -34,4 +53,5 @@ const images = ref([
   "/image/4.jpg",
   "/image/5.jpg",
 ]);
+
 </script>
