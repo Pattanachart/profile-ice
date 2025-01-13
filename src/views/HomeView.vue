@@ -16,7 +16,7 @@
           v-for="(image, index) in images"
           :key="image"
         >
-          <img :src="image" class="d-block w-100" alt="..." />
+          <img :src="image" class="d-block w-100 rounded" style="" />
         </div>
       </div>
       <button
@@ -53,5 +53,4 @@ const images = ref([
   "/image/4.jpg",
   "/image/5.jpg",
 ]);
-
 </script>
