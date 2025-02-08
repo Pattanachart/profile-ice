@@ -47,10 +47,10 @@ import { ref } from "vue";
 
 const dateNow = dayjs().format("MMMM D, YYYY h:mm A");
 const images = ref([
+  "/image/resume.png",
   "/image/1.jpg",
   "/image/2.jpg",
   "/image/3.jpg",
   "/image/4.jpg",
-  "/image/5.jpg",
 ]);
 </script>
