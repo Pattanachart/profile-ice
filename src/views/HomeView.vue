@@ -1,7 +1,7 @@
 <template>
   <div class="text-end">{{ dateNow }}</div>
   <div class="text-center text-body-secondary h1 m-2 p-2">
-    ภัทราวดี สังข์สม (OR) CMMM007GREEN
+    ภัทราวดี สังข์สม (OR) DEV
   </div>
   <div class="container mt-5">
     <div
